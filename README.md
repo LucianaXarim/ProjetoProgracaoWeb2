@@ -115,11 +115,11 @@ Esse projeto considerou os seguintes parâmetros:
 * Banco de Dados: H2 database
 * Software Teste: Postman
 * Dependências Adicionadas: 
-      * com.auth0 | java-jwt
-      * springframework.security | spring-security-test
-      * org.springframework.boot | spring-boot-starter-security
-      * org.springframework.boot | spring-boot-starter-data-jpa
-      *org.springframework.boot | spring-boot-starter-test
+1. com.auth0 | java-jwt
+2. springframework.security | spring-security-test
+3. org.springframework.boot | spring-boot-starter-security
+4. org.springframework.boot | spring-boot-starter-data-jpa
+5. org.springframework.boot | spring-boot-starter-test
 
 
 ### 5)	Aprendizados & Desafios
