@@ -107,7 +107,8 @@ Esse projeto considerou os seguintes parâmetros:
 * Framework Java: Spring Boot
 * Banco de Dados: H2 database
 * Software Teste: Postman
-* Dependências Adicionadas: 
+* Dependências Adicionadas:
+  
 [x] com.auth0 | java-jwt
 [x] springframework.security | spring-security-test
 [x] org.springframework.boot | spring-boot-starter-security
