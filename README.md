@@ -1,32 +1,32 @@
 # Projeto Programação Web2
 Ecommerce Mana | Login, Authentication & CRUD
 
-###1)	Objetivo do Projeto
+### 1)	Objetivo do Projeto
 Este projeto tem o objetivo de disponibilizar uma API composta por um conjunto de endpoints necessários para a operação de um Ecommerce. A macroestrutura do serviço está organizada da seguinte forma:
 
-•	Login
-•	Usuário
-•	Tipo de Produto & Produto
-•	Tipo de Pagamento & Pagamento
-•	Pedido
+* Login
+* Usuário
+* Tipo de Produto & Produto
+* Tipo de Pagamento & Pagamento
+* Pedido
 
 
 Esse projeto considera ainda os serviços de autenticação de usuário para que todas as requests sejam devidamente autorizados pelos serviços de SecurityFilter e TokenService.
 
 ### 2)	Segurança
 A segurança de acesso à API foi construída considerando os seguintes serviços:
-•	Login
-•	SecurityConfig
-•	SecurityFilter
-•	TokenService
+* Login
+* SecurityConfig
+* SecurityFilter
+* TokenService
 
 De forma geral, esses serviços ficam responsáveis, respectivamente por: 
 
-•	Disponibilizar endpoint para que um usuário cadastrado na API, possa realizar o cadastro de login e receber como retorno um Token do tipo JWT, que deverá ser utilizado nas demais consultas. Vale ressaltar que o token é do tipo Bearer que deverá ser registrado no campo “Authorization” no Header da requisição;
+* Disponibilizar endpoint para que um usuário cadastrado na API, possa realizar o cadastro de login e receber como retorno um Token do tipo JWT, que deverá ser utilizado nas demais consultas. Vale ressaltar que o token é do tipo Bearer que deverá ser registrado no campo “Authorization” no Header da requisição;
 
-•	O Serviço de security config conterá as configurações de autorização a serem seguidos pela authorizeHttpRequests, padrão do Java que, em nosso caso, serão aplicados somente após os filtros próprios desenvolvidos no projeto. Essa tem a função de inicialmente já realizar a autenticação do usuário para depois seguir para as próximas etapas;
+* O Serviço de security config conterá as configurações de autorização a serem seguidos pela authorizeHttpRequests, padrão do Java que, em nosso caso, serão aplicados somente após os filtros próprios desenvolvidos no projeto. Essa tem a função de inicialmente já realizar a autenticação do usuário para depois seguir para as próximas etapas;
 
-•	Na sequência, o token é submetido a validações com o objetivo de verificar se sua formatação está no formato padrão esperado pelo serviço (Bearer);
+* Na sequência, o token é submetido a validações com o objetivo de verificar se sua formatação está no formato padrão esperado pelo serviço (Bearer);
 
 •	Por fim, este último serviço será responsável por critptografar/descriptografar a senha de acesso cadastrada pelo usuário com o objetivo de tornar o processo mais seguro. Neste projeto foi utilizado o algoritmo “HMAC512”.
 
@@ -98,10 +98,10 @@ UserDetails findByEmail(String email);
 
 	Aqui vale ressaltar que no projeto foi utilizado apenas o delete lógico dos registros.
 Esses por sua vez, nos permitirão realizar: 
-•	Gestão de Clientes
-•	Gerenciamento de Produtos
-•	Gerenciamento de Pagamento
-•	Gerenciamento de Pedidos
+* Gestão de Clientes
+* Gerenciamento de Produtos
+* Gerenciamento de Pagamento
+* Gerenciamento de Pedidos
 
 Na sequência, serão apresentados alguns exemplos do uso do CRUD utilizados nesta aplicação:
 
@@ -110,23 +110,23 @@ Na sequência, serão apresentados alguns exemplos do uso do CRUD utilizados nes
 
 Esse projeto considerou os seguintes parâmetros:
 
-•	Linguagem: Java Version 20.0.1
-•	Framework Java: Spring Boot
-•	Banco de Dados: H2 database
-•	Software Teste: Postman
-•	Dependências Adicionadas: 
-o	com.auth0 | java-jwt
-o	springframework.security | spring-security-test
-o	org.springframework.boot | spring-boot-starter-security
-o	org.springframework.boot | spring-boot-starter-data-jpa
-o	org.springframework.boot | spring-boot-starter-test
+* Linguagem: Java Version 20.0.1
+* Framework Java: Spring Boot
+* Banco de Dados: H2 database
+* Software Teste: Postman
+* Dependências Adicionadas: 
+      * com.auth0 | java-jwt
+      * springframework.security | spring-security-test
+      * org.springframework.boot | spring-boot-starter-security
+      * org.springframework.boot | spring-boot-starter-data-jpa
+      *org.springframework.boot | spring-boot-starter-test
 
 
 ### 5)	Aprendizados & Desafios
 
-•	Como novo aprendizado destaco a criação do projeto de forma modular e com acesso através de endpoints, acessados via Postman. Além disso, neste projeto, foi possível identificar a aplicabilidade dos conceitos SOLID aprendidos no módulo anterior.
+* Como novo aprendizado destaco a criação do projeto de forma modular e com acesso através de endpoints, acessados via Postman. Além disso, neste projeto, foi possível identificar a aplicabilidade dos conceitos SOLID aprendidos no módulo anterior.
 
-•	Adicionalmente, destaco a grande aprendizagem adquirida através do uso/configuração do banco de dados h2 e da construção da função de login e autenticação de usuário. Essa também foi uma das partes mais desafiadoras do projeto, tendo em vista as diversas configurações e etapas de validação necessárias para autenticar um usuário que deseja utilizar uma das requisições que compõem a API de Ecommerce.
+* Adicionalmente, destaco a grande aprendizagem adquirida através do uso/configuração do banco de dados h2 e da construção da função de login e autenticação de usuário. Essa também foi uma das partes mais desafiadoras do projeto, tendo em vista as diversas configurações e etapas de validação necessárias para autenticar um usuário que deseja utilizar uma das requisições que compõem a API de Ecommerce.
 
 
  
