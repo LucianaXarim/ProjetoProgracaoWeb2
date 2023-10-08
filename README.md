@@ -17,7 +17,7 @@ Para os tipos de pagamentos está previstão previstos os registros dos seguinte
 
 Exemplo | Payment
 
-![](img src="C:\Users\lucia\Downloads\Curso BTG - Java\Payment.jpg")
+![](C:\Users\lucia\Downloads\Curso BTG - Java\Payment.jpg)
 
 
 
@@ -117,11 +117,11 @@ Esse projeto considerou os seguintes parâmetros:
 * Banco de Dados: H2 database
 * Software Teste: Postman
 * Dependências Adicionadas:
-_1. com.auth0 | java-jwt
-_2. springframework.security | spring-security-test
-_3. org.springframework.boot | spring-boot-starter-security
-_4. org.springframework.boot | spring-boot-starter-data-jpa
-_5. org.springframework.boot | spring-boot-starter-test
+1. com.auth0 | java-jwt
+2. springframework.security | spring-security-test
+3. org.springframework.boot | spring-boot-starter-security
+4. org.springframework.boot | spring-boot-starter-data-jpa
+5. org.springframework.boot | spring-boot-starter-test
 
 
 ### 5)	Aprendizados & Desafios
