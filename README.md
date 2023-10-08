@@ -74,11 +74,11 @@ UserService
         return UserConvert.toResponse(user);
     }
 
+    //UserRepository Chamada para recuperar o email de um usuário cadastrado na base de dados
+    UserDetails findByEmail(String email);
 
-UserRepository
-//Chamada para recuperar o email de um usuário cadastrado na base de dados
 
-UserDetails findByEmail(String email);
+
 
 
 #### 3.3)	Update (Atualizar) - A operação é usada para atualizar os registros existentes no banco de dados.
