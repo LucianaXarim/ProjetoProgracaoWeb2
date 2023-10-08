@@ -1,5 +1,7 @@
 # Projeto Programação Web2
 Ecommerce Mana | Login, Authentication & CRUD
+<https://github.com/LucianaXarim/ProjetoProgracaoWeb2/tree/main/MeuPrimeiroProjeto/src/main/java/com/ada/MeuPrimeiroProjeto>
+
 
 ### 1)	Objetivo do Projeto
 Este projeto tem o objetivo de disponibilizar uma API composta por um conjunto de endpoints necessários para a operação de um Ecommerce. A macroestrutura do serviço está organizada da seguinte forma:
@@ -15,7 +17,7 @@ Para os tipos de pagamentos está previstão previstos os registros dos seguinte
 * TypePayment: "a vista" + Payment: "pix" ou "debito"
 * TypePayment: "a prazo" + Payment: "boleto" ou "cartao de credito"
 
-Exemplo | Payment
+_Exemplo | Payment_
 
 
 <div align="center">
