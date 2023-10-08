@@ -40,7 +40,6 @@ As funcionalidades desenvolvidas neste projeto previram a construção de um CRU
 #### 3.1)	Create (Criar) - A operação é usada para criar novos registros ou objetos à um banco de dados. 
 Exemplo:
 
-
     //Criar o novo usuário
     User newUser = new User();
     newUser.setName("Juliana");
@@ -73,15 +72,19 @@ Exemplo:
 
 
 #### 3.3)	Update (Atualizar) - A operação é usada para atualizar os registros existentes no banco de dados.
+Exemplo:
 
-    //Chamada para realizar a atualização de todos os dados de um usuário na base de dados
+    //UserService - Chamada para realizar a atualização de todos os dados de um usuário na base de dados
     public UserResponse updateUser(Integer id, UserRequest userRequest){
         User user = UserConvert.toEntity(userRequest);
         user.setId(id);
         return UserConvert.toResponse(userRepository.save(user));
     }
+    
 #### 3.4)	Delete (Apagar) | A operação é usada para excluir os registros existentes no banco de dados
-     //Chamada para realizar a deleção um usuário na base de dados
+Exemplo:
+
+     //UserService - Chamada para realizar a deleção um usuário na base de dados
      public void deleteUser(Integer id){
         User user = userRepository.findById(id).orElseThrow();
         user.setActive(false);
