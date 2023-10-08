@@ -30,6 +30,10 @@ _Exemplo | Payment_
 <img src="https://github.com/LucianaXarim/ProjetoProgracaoWeb2/assets/67563370/2c89a279-1b85-42dc-89fa-1f42d9b10e85" width="900px" />
 </div>
 
+
+  
+
+
 ### 2)	Segurança
 A segurança de acesso à API foi construída considerando os seguintes serviços:
 * Login
@@ -54,6 +58,10 @@ _Exemplo | Token Authentication_
 <div align="center">
 <img src="https://github.com/LucianaXarim/ProjetoProgracaoWeb2/assets/67563370/2b6b75cd-0981-44af-94d6-6897fe7a1599" width="900px" />
 </div>
+
+
+  
+
 
 
 ### 3)	Funcionalidades
@@ -123,7 +131,7 @@ Esses por sua vez, nos permitirão realizar:
 * Gerenciamento de Pedidos
 
 
-
+  
 
 ### 4)	Tecnologias, Framework, BD & Dependências 
 
@@ -140,6 +148,8 @@ Esse projeto considerou os seguintes parâmetros:
 4. org.springframework.boot | spring-boot-starter-data-jpa
 5. org.springframework.boot | spring-boot-starter-test
 
+
+  
 
 ### 5)	Aprendizados & Desafios
 
