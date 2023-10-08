@@ -1,4 +1,4 @@
-# ProjetoProgracaoWeb2
+# Projeto Programação Web2
 Ecommerce Mana | Login, Authentication & CRUD
 
 ###1)	Objetivo do Projeto
