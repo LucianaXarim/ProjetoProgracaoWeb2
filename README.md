@@ -136,6 +136,7 @@ Esse projeto considerou os seguintes parâmetros:
 * Framework Java: Spring Boot
 * Banco de Dados: H2 database
 * Software Teste: Postman
+* Tipo de Token: JWT | jwt.io
 * Dependências Adicionadas:
 1. com.auth0 | java-jwt
 2. springframework.security | spring-security-test
