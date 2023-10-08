@@ -3,7 +3,7 @@ Ecommerce Mana | Login, Authentication & CRUD
 
 
 
-### 0)	Repositório do Projeto | Github
+### 0)	Repositório x Pastas do Projeto | Github
 <https://github.com/LucianaXarim/ProjetoProgracaoWeb2/tree/main/MeuPrimeiroProjeto/src/main/java/com/ada/MeuPrimeiroProjeto>
 
 
