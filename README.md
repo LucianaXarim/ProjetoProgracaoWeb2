@@ -23,6 +23,8 @@ Para os tipos de pagamentos está previstão previstos os registros dos seguinte
 * TypePayment: "a vista" + Payment: "pix" ou "debito"
 * TypePayment: "a prazo" + Payment: "boleto" ou "cartao de credito"
 
+
+  
 _Exemplo | Payment_
 
 
@@ -50,6 +52,7 @@ De forma geral, esses serviços ficam responsáveis, respectivamente por:
 •	Por fim, este último serviço será responsável por critptografar/descriptografar a senha de acesso cadastrada pelo usuário com o objetivo de tornar o processo mais seguro. Neste projeto foi utilizado o algoritmo “HMAC512”.
 
 
+  
 _Exemplo | Token Authentication_
 
 
@@ -59,9 +62,6 @@ _Exemplo | Token Authentication_
 
 
   
-
-
-
 ### 3)	Funcionalidades
 
 As funcionalidades desenvolvidas neste projeto previram a construção de um CRUD (acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar)).Na sequência, serão apresentados alguns exemplos do uso do CRUD utilizados nesta aplicação:
@@ -97,9 +97,7 @@ Exemplo:
     UserDetails findByEmail(String email);
 
 
-
-
-
+  
 #### 3.3)	Update (Atualizar) - A operação é usada para atualizar os registros existentes no banco de dados.
 Exemplo:
 
@@ -130,7 +128,6 @@ Esses por sua vez, nos permitirão realizar:
 
 
   
-
 ### 4)	Tecnologias, Framework, BD & Dependências 
 
 Esse projeto considerou os seguintes parâmetros:
@@ -148,7 +145,6 @@ Esse projeto considerou os seguintes parâmetros:
 
 
   
-
 ### 5)	Aprendizados & Desafios
 
 * Como novo aprendizado destaco a criação do projeto de forma modular e com acesso através de endpoints, acessados via Postman. Além disso, neste projeto, foi possível identificar a aplicabilidade dos conceitos SOLID aprendidos no módulo anterior.
