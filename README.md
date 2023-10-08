@@ -1,7 +1,7 @@
 # ProjetoProgracaoWeb2
 Ecommerce Mana | Login, Authentication & CRUD
 
-1)	Objetivo do Projeto
+##1)	Objetivo do Projeto
 Este projeto tem o objetivo de disponibilizar uma API composta por um conjunto de endpoints necessários para a operação de um Ecommerce. A macroestrutura do serviço está organizada da seguinte forma:
 
 •	Login
@@ -13,7 +13,7 @@ Este projeto tem o objetivo de disponibilizar uma API composta por um conjunto d
 
 Esse projeto considera ainda os serviços de autenticação de usuário para que todas as requests sejam devidamente autorizados pelos serviços de SecurityFilter e TokenService.
 
-2)	Segurança
+##2)	Segurança
 A segurança de acesso à API foi construída considerando os seguintes serviços:
 •	Login
 •	SecurityConfig
@@ -36,11 +36,11 @@ De forma geral, esses serviços ficam responsáveis, respectivamente por:
 
 
 
-3)	Funcionalidades
+##3)	Funcionalidades
 
 As funcionalidades desenvolvidas neste projeto previram a construção de um CRUD (acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar)), com o objetivo de proporcionar a realização das seguintes ações:
 
-1)	Create (Criar) - A operação é usada para criar novos registros ou objetos à um banco de dados. 
+###3.1)	Create (Criar) - A operação é usada para criar novos registros ou objetos à um banco de dados. 
 Exemplo:
 
 //Criar o novo usuário
@@ -53,7 +53,7 @@ newUser.setPassword("Amareloazul@23");
 //Salvar o usuário no banco de dados
 UserRepository.save(newUser);
 
-2)	Read (Ler) - A operação é usada para ler os dados do banco de dados.
+###3.2)	Read (Ler) - A operação é usada para ler os dados do banco de dados.
 Exemplo:
 
 UserController
@@ -81,7 +81,7 @@ UserRepository
 UserDetails findByEmail(String email);
 
 
-3)	Update (Atualizar) - A operação é usada para atualizar os registros existentes no banco de dados.
+###3.3)	Update (Atualizar) - A operação é usada para atualizar os registros existentes no banco de dados.
 //Chamada para realizar a atualização de todos os dados de um usuário na base de dados
 
     public UserResponse updateUser(Integer id, UserRequest userRequest){
@@ -89,7 +89,7 @@ UserDetails findByEmail(String email);
         user.setId(id);
         return UserConvert.toResponse(userRepository.save(user));
     }
-4)	Delete (Apagar) | A operação é usada para excluir os registros existentes no banco de dados
+###3.4)	Delete (Apagar) | A operação é usada para excluir os registros existentes no banco de dados
      public void deleteUser(Integer id){
         User user = userRepository.findById(id).orElseThrow();
         user.setActive(false);
@@ -106,7 +106,7 @@ Esses por sua vez, nos permitirão realizar:
 Na sequência, serão apresentados alguns exemplos do uso do CRUD utilizados nesta aplicação:
 
 
-4)	Tecnologias, Framework, BD & Dependências 
+##4)	Tecnologias, Framework, BD & Dependências 
 
 Esse projeto considerou os seguintes parâmetros:
 
@@ -122,7 +122,7 @@ o	org.springframework.boot | spring-boot-starter-data-jpa
 o	org.springframework.boot | spring-boot-starter-test
 
 
-5)	Aprendizados & Desafios
+##5)	Aprendizados & Desafios
 
 •	Como novo aprendizado destaco a criação do projeto de forma modular e com acesso através de endpoints, acessados via Postman. Além disso, neste projeto, foi possível identificar a aplicabilidade dos conceitos SOLID aprendidos no módulo anterior.
 
