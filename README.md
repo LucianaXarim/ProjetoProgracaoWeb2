@@ -32,8 +32,6 @@ _Exemplo | Payment_
 
 
   
-
-
 ### 2)	Segurança
 A segurança de acesso à API foi construída considerando os seguintes serviços:
 * Login
