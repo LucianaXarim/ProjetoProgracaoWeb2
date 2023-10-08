@@ -109,11 +109,11 @@ Esse projeto considerou os seguintes parâmetros:
 * Software Teste: Postman
 * Dependências Adicionadas:
   
-[x] com.auth0 | java-jwt
-[x] springframework.security | spring-security-test
-[x] org.springframework.boot | spring-boot-starter-security
-[x] org.springframework.boot | spring-boot-starter-data-jpa
-[x] org.springframework.boot | spring-boot-starter-test
+[x]com.auth0 | java-jwt
+[x]springframework.security | spring-security-test
+[x]org.springframework.boot | spring-boot-starter-security
+[x]org.springframework.boot | spring-boot-starter-data-jpa
+[x]org.springframework.boot | spring-boot-starter-test
 
 
 ### 5)	Aprendizados & Desafios
