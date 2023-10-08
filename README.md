@@ -7,11 +7,13 @@ Este projeto tem o objetivo de disponibilizar uma API composta por um conjunto d
 * Login
 * Usuário
 * Tipo de Produto & Produto
-* Tipo de Pagamento & Pagamento
+* Tipo de Pagamento & Pagamento 
 * Pedido
 
-
 Esse projeto considera ainda os serviços de autenticação de usuário para que todas as requests sejam devidamente autorizados pelos serviços de SecurityFilter e TokenService.
+Para os tipos de pagamentos está previstão previstos os registros dos seguintes tipo:
+* TypePayment: "a vista" + Payment: "pix" ou "debito"
+* TypePayment: "a prazo" + Payment: "boleto" ou "cartao de credito"
 
 ### 2)	Segurança
 A segurança de acesso à API foi construída considerando os seguintes serviços:
@@ -24,34 +26,29 @@ De forma geral, esses serviços ficam responsáveis, respectivamente por:
 
 * Disponibilizar endpoint para que um usuário cadastrado na API, possa realizar o cadastro de login e receber como retorno um Token do tipo JWT, que deverá ser utilizado nas demais consultas. Vale ressaltar que o token é do tipo Bearer que deverá ser registrado no campo “Authorization” no Header da requisição;
 
-* O Serviço de security config conterá as configurações de autorização a serem seguidos pela authorizeHttpRequests, padrão do Java que, em nosso caso, serão aplicados somente após os filtros próprios desenvolvidos no projeto. Essa tem a função de inicialmente já realizar a autenticação do usuário para depois seguir para as próximas etapas;
+* O Serviço de security config conterá as configurações de autorização a serem seguidos pela authorizeHttpRequests, padrão do Java que, em nosso caso, serão aplicados somente após os filtros próprios desenvolvidos no projeto. Essa tem a função de inicialmente já realizar a autenticação do usuário para depois seguir para as próximas etapas/filtros de verificação do Java;
 
-* Na sequência, o token é submetido a validações com o objetivo de verificar se sua formatação está no formato padrão esperado pelo serviço (Bearer);
+* Na sequência, o token é submetido a validações com o objetivo de verificar se está no formato padrão esperado pelo serviço (Bearer);
 
 •	Por fim, este último serviço será responsável por critptografar/descriptografar a senha de acesso cadastrada pelo usuário com o objetivo de tornar o processo mais seguro. Neste projeto foi utilizado o algoritmo “HMAC512”.
 
 
-
-
-
-
-
 ### 3)	Funcionalidades
 
-As funcionalidades desenvolvidas neste projeto previram a construção de um CRUD (acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar)), com o objetivo de proporcionar a realização das seguintes ações:
+As funcionalidades desenvolvidas neste projeto previram a construção de um CRUD (acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar)).Na sequência, serão apresentados alguns exemplos do uso do CRUD utilizados nesta aplicação:
 
 #### 3.1)	Create (Criar) - A operação é usada para criar novos registros ou objetos à um banco de dados. 
 Exemplo:
 
-//Criar o novo usuário
 
-User newUser = new User();
-newUser.setName("Juliana");
-newUser.setEmail("juliana@teste.com");
-newUser.setPassword("Amareloazul@23");
+    //Criar o novo usuário
+    User newUser = new User();
+    newUser.setName("Juliana");
+    newUser.setEmail("juliana@teste.com");
+    newUser.setPassword("Amareloazul@23");
 
-//Salvar o usuário no banco de dados
-UserRepository.save(newUser);
+    //Salvar o usuário no banco de dados
+    UserRepository.save(newUser);
 
 #### 3.2)	Read (Ler) - A operação é usada para ler os dados do banco de dados.
 Exemplo:
@@ -76,28 +73,30 @@ Exemplo:
 
 
 #### 3.3)	Update (Atualizar) - A operação é usada para atualizar os registros existentes no banco de dados.
-//Chamada para realizar a atualização de todos os dados de um usuário na base de dados
 
+    //Chamada para realizar a atualização de todos os dados de um usuário na base de dados
     public UserResponse updateUser(Integer id, UserRequest userRequest){
         User user = UserConvert.toEntity(userRequest);
         user.setId(id);
         return UserConvert.toResponse(userRepository.save(user));
     }
 #### 3.4)	Delete (Apagar) | A operação é usada para excluir os registros existentes no banco de dados
+     //Chamada para realizar a deleção um usuário na base de dados
      public void deleteUser(Integer id){
         User user = userRepository.findById(id).orElseThrow();
         user.setActive(false);
         userRepository.save(user);
     }
 
-	Aqui vale ressaltar que no projeto foi utilizado apenas o delete lógico dos registros.
+Aqui vale ressaltar que no projeto foi utilizado apenas o delete lógico dos registros.
 Esses por sua vez, nos permitirão realizar: 
+
 * Gestão de Clientes
 * Gerenciamento de Produtos
 * Gerenciamento de Pagamento
 * Gerenciamento de Pedidos
 
-Na sequência, serão apresentados alguns exemplos do uso do CRUD utilizados nesta aplicação:
+
 
 
 ### 4)	Tecnologias, Framework, BD & Dependências 
