@@ -17,10 +17,9 @@ Para os tipos de pagamentos está previstão previstos os registros dos seguinte
 
 Exemplo | Payment
 
-!(C:\Users\lucia\Downloads\Curso BTG - Java\Payment.jpg)
 
 <div align="center">
-<img src="https://github.com/LucianaXarim/ProjetoProgracaoWeb2/assets/67563370/2c89a279-1b85-42dc-89fa-1f42d9b10e85" width="700px" />
+<img src="https://github.com/LucianaXarim/ProjetoProgracaoWeb2/assets/67563370/2c89a279-1b85-42dc-89fa-1f42d9b10e85" width="900px" />
 </div>
 
 ### 2)	Segurança
