@@ -15,6 +15,11 @@ Para os tipos de pagamentos está previstão previstos os registros dos seguinte
 * TypePayment: "a vista" + Payment: "pix" ou "debito"
 * TypePayment: "a prazo" + Payment: "boleto" ou "cartao de credito"
 
+Exemplo | Payment
+
+![Payment.jpg](C:\Users\lucia\Downloads\Curso BTG - Java)
+
+
 ### 2)	Segurança
 A segurança de acesso à API foi construída considerando os seguintes serviços:
 * Login
