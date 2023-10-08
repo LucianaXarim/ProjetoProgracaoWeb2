@@ -56,25 +56,19 @@ UserRepository.save(newUser);
 #### 3.2)	Read (Ler) - A operação é usada para ler os dados do banco de dados.
 Exemplo:
 
-UserController
-//Chamada para recuperar o email de um usuário a partir do endpoint na API
-
+    //UserController - Chamada para recuperar o email de um usuário a partir do endpoint na API
     @GetMapping ("/email/{email}")
     public ResponseEntity<UserResponse> getUser(@PathVariable String email){
         return ResponseEntity.ok(userService.getUserByEmail(email));
     }
 
-
-
-UserService
-//Chamada para recuperar o email de um usuário 
-
+    //UserService - Chamada para recuperar o email de um usuário 
     public UserResponse getUserByEmail(String email){
         User user = (User) userRepository.findByEmail(email);
         return UserConvert.toResponse(user);
     }
 
-    //UserRepository Chamada para recuperar o email de um usuário cadastrado na base de dados
+    //UserRepository - Chamada para recuperar o email de um usuário cadastrado na base de dados
     UserDetails findByEmail(String email);
 
 
