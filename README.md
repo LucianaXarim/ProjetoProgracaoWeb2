@@ -42,6 +42,14 @@ De forma geral, esses serviços ficam responsáveis, respectivamente por:
 •	Por fim, este último serviço será responsável por critptografar/descriptografar a senha de acesso cadastrada pelo usuário com o objetivo de tornar o processo mais seguro. Neste projeto foi utilizado o algoritmo “HMAC512”.
 
 
+_Exemplo | Token Authentication_
+
+
+<div align="center">
+<img src="https://github.com/LucianaXarim/ProjetoProgracaoWeb2/assets/67563370/2b6b75cd-0981-44af-94d6-6897fe7a1599" width="900px" />
+</div>
+
+
 ### 3)	Funcionalidades
 
 As funcionalidades desenvolvidas neste projeto previram a construção de um CRUD (acrônimo para Create (criar), Read (ler), Update (atualizar) e Delete (apagar)).Na sequência, serão apresentados alguns exemplos do uso do CRUD utilizados nesta aplicação:
